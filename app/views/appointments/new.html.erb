@@ -1,0 +1,13 @@
+<h2> form of Appointments</h2> 
+<%= form_for @appointment, url: {action: "create"} do |form| %>
+  <%= form.label :Date_Time %>
+  <%= form.date_field :appointment_date %>
+  <% if params[:patient_id]%>
+    <%= form.label :physician %>
+    <%= form.collection_select :physician_id , @physicians , :id, :name  %>
+  <%else%>
+    <%= form.label :patient %>
+    <%= form.collection_select :patient_id , @patients , :id, :name  %>
+  <%end%>
+  <%= form.submit %>
+<% end %>

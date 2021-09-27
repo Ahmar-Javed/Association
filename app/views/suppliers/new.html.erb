@@ -1,0 +1,6 @@
+<h2> form of Suppluer</h2> 
+<%= form_for @supplier, url: {action: "create"} do |form| %>
+  <%= label_tag :name, "my name:" %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>

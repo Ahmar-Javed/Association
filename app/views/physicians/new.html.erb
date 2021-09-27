@@ -1,0 +1,6 @@
+<h2> form of Physicians</h2> 
+<%= form_for @physician, url: {action: "create"} do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>
